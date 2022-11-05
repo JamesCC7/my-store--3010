@@ -6,5 +6,33 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'my-store';
+  public name = 'James';
+  age=18;
+  img = 'https://i.ytimg.com/vi/jyUDjCzbDZc/maxresdefault.jpg';
+  btnDisabled = true;
+  person = {
+    name: 'James',
+    age:18,
+    avatar:'https://i.ytimg.com/vi/jyUDjCzbDZc/maxresdefault.jpg'
+  }
+
+  toggleButton(){
+    this.btnDisabled = !this.btnDisabled;
+  }
+
+  increaseAge(){
+    this.person.age += 1;
+  }
+
+  onScroll(event: Event){
+    const element = event.target as HTMLElement;
+    console.log(element.scrollTop);
+  }
+
+  changeName(event: Event){
+    const element = event.target as HTMLInputElement;
+    this.person.name = element.value;
+  }
+
+
 }
