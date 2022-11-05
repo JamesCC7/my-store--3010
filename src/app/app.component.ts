@@ -33,6 +33,4 @@ export class AppComponent {
     const element = event.target as HTMLInputElement;
     this.person.name = element.value;
   }
-
-
 }
